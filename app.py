@@ -2,6 +2,10 @@ from flask import Flask, render_template, request
 from bs4 import BeautifulSoup
 import requests
 from difflib import SequenceMatcher
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 
 app = Flask(__name__)
 
@@ -62,5 +66,5 @@ def search():
         return "something went wrong!"
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     app.run(debug=True)
